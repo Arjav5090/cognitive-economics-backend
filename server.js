@@ -81,7 +81,9 @@ cron.schedule('0 0 * * 0', async () => {
 
 console.log("📅 Weekly DB & File cleanup scheduled: Every Sunday at midnight.");
 
-
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server is running on port ${PORT}`);
+});
 
 // Start the server
 module.exports = app;
