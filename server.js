@@ -11,13 +11,18 @@ dotenv.config();
 
 
 const app = express();
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 10000;
 
 // Middleware
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.use(cors({
+    origin: 'https://andrewcaplin.com',
+    credentials: true
+  }));
+  
 // Serve uploaded files
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
@@ -79,6 +84,4 @@ console.log("📅 Weekly DB & File cleanup scheduled: Every Sunday at midnight."
 
 
 // Start the server
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
+module.exports = app;
