@@ -77,7 +77,7 @@ router.post('/submit', upload.single('proposalFile'), async (req, res) => {
 
         const mailOptions = {
             from: process.env.EMAIL_USER,
-            to: '19dce149@charusat.edu.in',
+            to: 'ac1@nyu.edu',
             subject: 'New Questionnaire Submission',
             html: `
                 <html>
