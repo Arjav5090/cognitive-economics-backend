@@ -14,14 +14,12 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
-app.use(cors());
+const cors = require('cors');
+app.use(cors({ origin: 'https://andrewcaplin.com' }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(cors({
-    origin: 'https://andrewcaplin.com',
-    credentials: true
-  }));
+
   
 // Serve uploaded files
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
