@@ -6,8 +6,7 @@
   "scripts": {
 
   "build": "tsc",
-    "start": "node index.js",
-    
+    "start": "node server.js",
   "postinstall": "npm install"
   },
   "engines": {
