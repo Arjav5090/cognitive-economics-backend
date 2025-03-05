@@ -4,10 +4,15 @@
   "main": "index.js",
   "homepage": "https://andrewcaplin.com/",
   "scripts": {
-    "start": "node dist/index.js",
+
   "build": "tsc",
-  "postinstall": "npm run build"
+    "start": "node index.js",
+    
+  "postinstall": "npm install"
   },
+  "engines": {
+    "node": "18.x"
+  },  
   "keywords": [],
   "author": "",
   "license": "ISC",
